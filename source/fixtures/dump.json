@@ -1,0 +1,162 @@
+[
+{
+  "model": "posts.post",
+  "pk": 13,
+  "fields": {
+    "descriptions": "1",
+    "image": "posts/7.jpg",
+    "author": 4,
+    "likes_count": 1,
+    "comments_count": 0
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 14,
+  "fields": {
+    "descriptions": "2",
+    "image": "posts/7_QOThND2.jpg",
+    "author": 4,
+    "likes_count": 1,
+    "comments_count": 0
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 15,
+  "fields": {
+    "descriptions": "Новое описание",
+    "image": "posts/7_Qlb8b0z.jpg",
+    "author": 4,
+    "likes_count": 1,
+    "comments_count": 0
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 16,
+  "fields": {
+    "descriptions": "3",
+    "image": "posts/7_IzipicC.jpg",
+    "author": 4,
+    "likes_count": 1,
+    "comments_count": 0
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 17,
+  "fields": {
+    "descriptions": "3",
+    "image": "posts/7_e1G8JYG.jpg",
+    "author": 4,
+    "likes_count": 1,
+    "comments_count": 0
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 18,
+  "fields": {
+    "descriptions": "3",
+    "image": "posts/7_m8BKq22.jpg",
+    "author": 4,
+    "likes_count": 1,
+    "comments_count": 0
+  }
+},
+{
+  "model": "posts.post",
+  "pk": 19,
+  "fields": {
+    "descriptions": "3",
+    "image": "posts/7_WTsOSoO.jpg",
+    "author": 4,
+    "likes_count": 1,
+    "comments_count": 0
+  }
+},
+{
+  "model": "posts.comment",
+  "pk": 1,
+  "fields": {
+    "author": 3,
+    "post": 13,
+    "text": "rrr"
+  }
+},
+{
+  "model": "posts.comment",
+  "pk": 4,
+  "fields": {
+    "author": 4,
+    "post": 13,
+    "text": "qw"
+  }
+},
+{
+  "model": "posts.comment",
+  "pk": 5,
+  "fields": {
+    "author": 4,
+    "post": 14,
+    "text": "qwe"
+  }
+},
+{
+  "model": "posts.like",
+  "pk": 9,
+  "fields": {
+    "author": 3,
+    "post": 17
+  }
+},
+{
+  "model": "posts.like",
+  "pk": 34,
+  "fields": {
+    "author": 4,
+    "post": 15
+  }
+},
+{
+  "model": "posts.like",
+  "pk": 35,
+  "fields": {
+    "author": 4,
+    "post": 18
+  }
+},
+{
+  "model": "posts.like",
+  "pk": 36,
+  "fields": {
+    "author": 4,
+    "post": 19
+  }
+},
+{
+  "model": "posts.like",
+  "pk": 37,
+  "fields": {
+    "author": 4,
+    "post": 14
+  }
+},
+{
+  "model": "posts.like",
+  "pk": 38,
+  "fields": {
+    "author": 4,
+    "post": 16
+  }
+},
+{
+  "model": "posts.like",
+  "pk": 40,
+  "fields": {
+    "author": 4,
+    "post": 13
+  }
+}
+]

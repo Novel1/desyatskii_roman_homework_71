@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+{% block menu %}
+    <h1 style="margin-left: 400px; color: grey">Добавление публикации</h1>
+{% endblock %}
+{% block content %}
+    <div class="container">
+      <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+      {% bootstrap_form form %}
+    <button type="submit">Опубликовать</button>
+  </form>
+    </div>
+{% endblock %}

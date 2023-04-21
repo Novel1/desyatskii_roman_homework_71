@@ -1,0 +1,44 @@
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_messages %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-7dKfOOhuH7iITyUhAd3q7KX9oFtlm7V99xtFw0vaI7bOcOIHuG7lkpjCvq3Z7lXJQuMJpV7BX99jM4+iVt/Txg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Title</title>
+</head>
+<body>
+<header class="p-2 mb-3 border-bottom">
+
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <img src="{% static 'media/index.jpeg' %}" alt="mdo" width="80px"
+                 class="rounded-circle">
+    <a href="{% url 'index' %}">
+            <img src="{% static 'media/img.png' %}" alt="mdo" width="120px"
+                 class="rounded-circle">
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        {% block menu %}
+            {% endblock %}
+        </ul>
+        {% if user.is_authenticated %}
+                        <a href="{% url 'profile' user.pk %}"><i class=" col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 bi bi-person fa-2x"></i></a>
+        {% else %}
+            <a href="{% url 'login' %}" class="btn btn-light">Войти</a>
+            <a href="{% url 'register' %}" class="btn btn-light" style="margin-left: 5px">Зарегистрироваться</a>
+        {% endif %}
+    </div>
+</header>
+{% block content %}
+{% endblock %}
+</body>
+{% block script %}
+{% endblock %}
+</html>

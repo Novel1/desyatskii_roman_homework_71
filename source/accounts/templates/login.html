@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+{% block menu %}
+{% endblock %}
+{% block content %}
+    <div id="container" class="container">
+        <div class="window">
+            <div class="image-container">
+                <img src="{% static 'media/img.png' %}" alt="" class="centered-image">
+            </div>
+            <form action="{% url 'login' %}" method="post">
+                <div class="footer">
+                    {% csrf_token %}
+                    {% bootstrap_form form %}
+                    {% bootstrap_button button_type='submit' content='Войти' style='width: 480px; background-color: #4cb6f9'%}
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

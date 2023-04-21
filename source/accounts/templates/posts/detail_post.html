@@ -1,0 +1,18 @@
+{% block content %}
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.content }}</p>
+  <p>Likes: {{ post.likes.count }}</p>
+  {% if user.is_authenticated %}
+    {% if user in post.likes.all %}
+      <form action="{% url 'like_post' pk=post.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Unlike</button>
+      </form>
+    {% else %}
+      <form action="{% url 'like_post' pk=post.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Like</button>
+      </form>
+    {% endif %}
+  {% endif %}
+{% endblock %}

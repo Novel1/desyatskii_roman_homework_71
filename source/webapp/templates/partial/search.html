@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <h1 style="color: grey;">Search Results</h1>
+        {% if users %}
+            <ul>
+                {% for user in users %}
+                    <li><a href="{{ user.url }}" style="text-decoration: none">{{ user.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No matching users found.</p>
+        {% endif %}
+        <a href="{% url 'index' %}" style="text-decoration: none">Вернуться назад</a>
+    </div>
+{% endblock %}
